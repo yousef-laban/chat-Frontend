@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+//component
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import Signin from "./components/usersComponents/Signin";
+import Signup from "./components/usersComponents/Signup";
+
+//styleing
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, theme } from "./styles";
+
+//
+import { Route, Switch } from "react-router";
+import Verify from "./components/usersComponents/Verify";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+        <Route path="/signin">
+          <Signin />
+        </Route>
+
+        <Route path="/signup">
+          <Signup />
+        </Route>
+
+        <Route path="/verify">
+          <Verify />
+        </Route>
+      </Switch>
+    </>
   );
 }
 
