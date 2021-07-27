@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../store/actions/authActions";
 
+import { useHistory } from "react-router-dom";
+
 const NavBar = (props) => {
   const user = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const handelLogout = () => {
     dispatch(logout());
+    history.push("./");
   };
   return (
     <NavB className="navbar navbar-expand-lg navbar-light bg-light">

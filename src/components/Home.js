@@ -8,15 +8,13 @@ const Home = () => {
   const user = useSelector((state) => state.user.user);
   let history = useHistory();
 
-  console.log(user);
-
   return (
     <Center>
       {user ? (
         user.verify === false ? (
           history.push("./verify")
         ) : (
-          <h1>We Are Done For Today</h1>
+          history.push("./profile")
         )
       ) : (
         <h1>Please Sign In</h1>

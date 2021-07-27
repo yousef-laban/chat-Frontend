@@ -12,8 +12,10 @@ import { Provider } from "react-redux";
 import store from "./store/index";
 //
 import { checkForToken } from "./store/actions/authActions";
+import { fetchProfile } from "./store/actions/profileActions";
 
 store.dispatch(checkForToken());
+store.dispatch(fetchProfile());
 
 ReactDOM.render(
   <React.StrictMode>

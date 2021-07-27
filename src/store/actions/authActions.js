@@ -27,19 +27,35 @@ export const signin = (userData, history) => async (dispatch) => {
   }
 };
 
-export const logout = (history) => {
-  return setUser();
+export const logout = () => async (dispatch) => {
+  try {
+    dispatch(setUser());
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const verify = (user) => async (dispatch) => {
   try {
     const res = await axios.post("http://localhost:8000/verify", user);
-    console.log(res);
+
+    dispatch(verifyToken(res.data.token));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const verifying = (user, history) => async (dispatch) => {
+  try {
+    console.log(user);
+    const res = await axios.post("http://localhost:8000/verifying", user);
 
     dispatch({
-      type: actionType.VERIFY,
-      payload: res.data,
+      type: actionType.SET_USER,
+      payload: user,
     });
+
+    history.push("/");
   } catch (error) {
     console.log(error);
   }
@@ -73,4 +89,12 @@ const setUser = (token) => {
       payload: null,
     };
   }
+};
+
+const verifyToken = (token) => {
+  localStorage.setItem("Token", token);
+  return {
+    type: actionType.VERIFY,
+    payload: decode(token),
+  };
 };
