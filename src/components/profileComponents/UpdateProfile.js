@@ -72,10 +72,10 @@ const UpdateProfile = () => {
           id="gender"
           value={_profile}
         >
-          <option>Chose ...</option>
+          <option>Choose ...</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
-          <option value="Its Complecated">Its Complecated</option>
+          <option value="Its Complecated">Its Complicated</option>
         </select>
       </FlexStyleVer>
 
@@ -90,10 +90,10 @@ const UpdateProfile = () => {
           // value={product.url} we remove it becouse type file is read only
           onChange={handelUrl}
         />
-      </div>
+      </div><br></br>
 
       <br />
-      <button type="submit" className="btn btn-primary" value="Update">
+      <button type="submit" className="b17" value="Update">
         Update
       </button>
     </FormCenter>

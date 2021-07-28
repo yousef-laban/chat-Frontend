@@ -42,7 +42,7 @@ const Signup = () => {
 
   return (
     <FormCenter onSubmit={handleSubmit}>
-      <h3> Creat New User</h3>
+      <h3> Create New User</h3>
       <br />
 
       <div class="col-auto">
@@ -66,10 +66,10 @@ const Signup = () => {
       </div>
 
       <div className="form-group">
-        <label>password : </label>
+        <label>Password : </label>
         <input
           className="form-control"
-          placeholder="Enter the Password"
+          placeholder="Enter your password"
           type="password"
           name="password"
           //   value={product.price}
@@ -81,7 +81,7 @@ const Signup = () => {
         <label>E-mail: </label>
         <input
           className="form-control"
-          placeholder="Enter the Password"
+          placeholder="Enter your e-mail"
           type="email"
           name="email"
           //   value={product.price}
@@ -90,18 +90,19 @@ const Signup = () => {
       </div>
 
       <div className="form-group">
-        <label>Phone Num. : </label>
+        <label>Phone Number : </label>
         <input
           className="form-control"
+          placeholder="+96279???????"
           type="tel"
           name="phoneNum"
           onChange={handleChange}
         />
-      </div>
+      </div><br></br>
 
       <br />
-      <button type="submit" className="btn btn-primary" value="Creat">
-        Creat
+      <button type="submit" className="b16" value="Creat">
+        Create
       </button>
     </FormCenter>
   );
