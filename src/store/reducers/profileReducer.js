@@ -14,6 +14,7 @@ const reducer = (state = initialState, action) => {
     case actionType.UPDATE_PROFILE:
       const { updatedProfile } = action.payload;
 
+      //Remove console log
       //   console.log(
       //     "im hear",
       //     state.profiles.map((profile) =>

@@ -1,4 +1,6 @@
 import { combineReducers } from "redux";
+
+//Reducers
 import user from "./authReducer";
 import profiles from "./profileReducer";
 

@@ -1,18 +1,19 @@
-import { FlexStyleVer, FormCenter } from "../../styles";
-
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { updateProfile } from "../../store/actions/profileActions";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { useSelector } from "react-redux";
+
+//Styling
+import { FlexStyleVer, FormCenter } from "../../styles";
+import { updateProfile } from "../../store/actions/profileActions";
 
 const UpdateProfile = () => {
   const dispatch = useDispatch();
-  let history = useHistory();
-  const user = useSelector((state) => state.user.user);
 
+  let history = useHistory(); //Change to const
+
+  const user = useSelector((state) => state.user.user);
   const profiles = useSelector((state) => state.profiles.profiles);
-  const profile = profiles.filter((p) => p.userId === +user.id);
+  const profile = profiles.filter((p) => p.userId === +user.id); //Unused
 
   const newProfile = {
     fullName: "",
@@ -42,9 +43,7 @@ const UpdateProfile = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     dispatch(updateProfile(_profile));
-
     resetForm();
     history.push("/profile");
   };
@@ -63,7 +62,6 @@ const UpdateProfile = () => {
           placeholder="Enter Your Full Name"
         />
       </div>
-
       <FlexStyleVer>
         <label>Choose Gender : :</label>
         <select
@@ -72,26 +70,23 @@ const UpdateProfile = () => {
           id="gender"
           value={_profile}
         >
-          <option>Chose ...</option>
+          <option>Choose ...</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Its Complecated">Its Complecated</option>
         </select>
       </FlexStyleVer>
-
-      <br />
-
+      <br /> {/* Add a margin rather than using a break */}
       <div className="form-group">
         <label>Image : </label>
         <input
           className="form-control-file"
           type="file"
           name="image"
-          // value={product.url} we remove it becouse type file is read only
+          // value={product.url} we remove it becouse type file is read only {/* Delete if unused */}
           onChange={handelUrl}
         />
       </div>
-
       <br />
       <button type="submit" className="btn btn-primary" value="Update">
         Update

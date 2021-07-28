@@ -1,4 +1,3 @@
-//
 import instance from "./instance";
 
 // Action Types

@@ -1,12 +1,18 @@
-import { FormCenter } from "../../styles";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { signup } from "../../store/actions/authActions";
 import { useHistory } from "react-router-dom";
+
+//Styling
+import { FormCenter } from "../../styles";
+
+//Actions
+import { signup } from "../../store/actions/authActions";
 
 const Signup = () => {
   const dispatch = useDispatch();
-  let history = useHistory();
+
+  let history = useHistory(); //Change to const
+
   const newUser = {
     username: "",
     password: "",
@@ -31,17 +37,14 @@ const Signup = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     dispatch(signup(user, history));
-
     resetForm();
   };
 
   return (
     <FormCenter onSubmit={handleSubmit}>
       <h3> Creat New User</h3>
-      <br />
-
+      <br /> {/* Add a margin rather than using a break */}
       <div class="col-auto">
         <label class="sr-only" for="inlineFormInputGroup">
           Username
@@ -56,12 +59,11 @@ const Signup = () => {
             id="inlineFormInputGroup"
             placeholder="Username"
             name="username"
-            //   value={product.name}
+            //   value={product.name} Remove if unused
             onChange={handleChange}
           />
         </div>
       </div>
-
       <div className="form-group">
         <label>password : </label>
         <input
@@ -69,11 +71,10 @@ const Signup = () => {
           placeholder="Enter the Password"
           type="password"
           name="password"
-          //   value={product.price}
+          //   value={product.price} Remove if unused
           onChange={handleChange}
         />
       </div>
-
       <div className="form-group">
         <label>E-mail: </label>
         <input
@@ -81,11 +82,10 @@ const Signup = () => {
           placeholder="Enter the Password"
           type="email"
           name="email"
-          //   value={product.price}
+          //   value={product.price} Remove if unused
           onChange={handleChange}
         />
       </div>
-
       <div className="form-group">
         <label>Phone Num. : </label>
         <input
@@ -95,10 +95,10 @@ const Signup = () => {
           onChange={handleChange}
         />
       </div>
-
       <br />
       <button type="submit" className="btn btn-primary" value="Creat">
-        Creat
+        {/* Create not Creat*/}
+        Creat {/* Create not Creat*/}
       </button>
     </FormCenter>
   );

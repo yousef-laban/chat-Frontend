@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux";
-import { Center } from "../styles";
-
 import { useHistory } from "react-router-dom";
+
+//Styling
+import { Center } from "../styles";
 
 const Home = () => {
   const user = useSelector((state) => state.user.user);
-  let history = useHistory();
+
+  let history = useHistory(); //Change to const
 
   return (
     <Center>

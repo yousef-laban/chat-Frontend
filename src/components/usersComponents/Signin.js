@@ -1,12 +1,17 @@
-import { FormCenter } from "../../styles";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { signin } from "../../store/actions/authActions";
 import { useHistory } from "react-router-dom";
+
+//Styling
+import { FormCenter } from "../../styles";
+
+//Actions
+import { signin } from "../../store/actions/authActions";
 
 const Signin = () => {
   const dispatch = useDispatch();
-  let history = useHistory();
+
+  let history = useHistory(); //Change to const
 
   const newUser = {
     username: "",
@@ -28,17 +33,14 @@ const Signin = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     dispatch(signin(user, history));
-
     resetForm();
   };
 
   return (
     <FormCenter onSubmit={handleSubmit}>
       <h3> Sign In</h3>
-      <br />
-
+      <br /> {/* Add a margin rather than using a break */}
       <div class="col-auto">
         <label class="sr-only" for="inlineFormInputGroup">
           Username
@@ -57,7 +59,6 @@ const Signin = () => {
           />
         </div>
       </div>
-
       <div className="form-group">
         <label>password : </label>
         <input
@@ -68,7 +69,6 @@ const Signin = () => {
           onChange={handleChange}
         />
       </div>
-
       <br />
       <button type="submit" className="btn btn-primary" value="create">
         Sign In

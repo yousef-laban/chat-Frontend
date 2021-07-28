@@ -1,14 +1,13 @@
 import axios from "axios";
 import decode from "jwt-decode";
-// Action Types
+
+//Action Types
 import * as actionType from "./types";
 
 export const signup = (userData, history) => async (dispatch) => {
   try {
-    const res = await axios.post(`http://localhost:8000/signup`, userData);
-
+    const res = await axios.post(`http://localhost:8000/signup`, userData); //Replace with ""
     dispatch(setUser(res.data.token));
-
     history.push("/");
   } catch (error) {
     console.log(error);
@@ -17,8 +16,7 @@ export const signup = (userData, history) => async (dispatch) => {
 
 export const signin = (userData, history) => async (dispatch) => {
   try {
-    const res = await axios.post(`http://localhost:8000/signin`, userData);
-
+    const res = await axios.post(`http://localhost:8000/signin`, userData); //Replace with ""
     dispatch(setUser(res.data.token));
     history.push("/");
   } catch (error) {
@@ -37,7 +35,6 @@ export const logout = () => async (dispatch) => {
 export const verify = (user) => async (dispatch) => {
   try {
     const res = await axios.post("http://localhost:8000/verify", user);
-
     dispatch(verifyToken(res.data.token));
   } catch (error) {
     console.log(error);
@@ -48,12 +45,10 @@ export const verifying = (user, history) => async (dispatch) => {
   try {
     console.log(user);
     const res = await axios.post("http://localhost:8000/verifying", user);
-
     dispatch({
       type: actionType.SET_USER,
       payload: user,
     });
-
     history.push("/");
   } catch (error) {
     console.log(error);

@@ -1,9 +1,11 @@
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
+//Actions
 import { verify } from "../../store/actions/authActions";
 
 const Verify = () => {
   const dispatch = useDispatch();
+
   const user = useSelector((state) => state.user.user);
 
   return (
@@ -11,7 +13,7 @@ const Verify = () => {
       <h2>Please Verify Your Email </h2>
 
       <button
-        style={{ margin: "10px" }}
+        style={{ margin: "10px" }} //Remove inline styling
         type="button"
         class="btn btn-secondary"
         onClick={() => dispatch(verify(user))}

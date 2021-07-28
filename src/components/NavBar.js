@@ -1,15 +1,21 @@
-import { NavB, Logo } from "../styles";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
+//Styling
+import { NavB, Logo } from "../styles";
+
+//Actions
 import { logout } from "../store/actions/authActions";
 
-import { useHistory } from "react-router-dom";
-
+//Unused props
 const NavBar = (props) => {
-  const user = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
-  let history = useHistory();
 
+  let history = useHistory(); //Change to const
+
+  const user = useSelector((state) => state.user.user);
+
+  //Rename to handleLogout
   const handelLogout = () => {
     dispatch(logout());
     history.push("./");
@@ -27,7 +33,7 @@ const NavBar = (props) => {
       <div>
         {user ? (
           <button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px" }} //Remove inline styling
             type="button"
             class="btn btn-secondary"
             onClick={handelLogout}
@@ -38,7 +44,7 @@ const NavBar = (props) => {
           <>
             <Link to="/signin">
               <button
-                style={{ margin: "10px" }}
+                style={{ margin: "10px" }} //Remove inline styling
                 type="button"
                 class="btn btn-secondary"
               >
@@ -48,7 +54,7 @@ const NavBar = (props) => {
 
             <Link to="/signup">
               <button
-                style={{ margin: "10px" }}
+                style={{ margin: "10px" }} //Remove inline styling
                 type="button"
                 class="btn btn-secondary"
               >
