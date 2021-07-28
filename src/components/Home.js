@@ -1,4 +1,3 @@
-//styling
 import { useSelector } from "react-redux";
 import { Center } from "../styles";
 

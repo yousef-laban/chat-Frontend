@@ -3,13 +3,10 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signup } from "../../store/actions/authActions";
 import { useHistory } from "react-router-dom";
-// import { useSelector } from "react-redux";
 
 const Signup = () => {
   const dispatch = useDispatch();
   let history = useHistory();
-  //   const products = useSelector((state) => state.products.products);
-
   const newUser = {
     username: "",
     password: "",

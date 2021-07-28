@@ -1,4 +1,3 @@
-//
 import axios from "axios";
 import decode from "jwt-decode";
 // Action Types

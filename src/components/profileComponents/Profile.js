@@ -1,5 +1,4 @@
 //styling
-//
 import { useSelector } from "react-redux";
 import { DetaledImage } from "../../styles";
 import { Link } from "react-router-dom";
@@ -16,8 +15,6 @@ const Home = () => {
   if (!wantedProfile) return <h2>loading</h2>;
 
   console.log("helo", wantedProfile);
-
-  //   const { fullName, image, gender } = wantedProfile;
 
   return (
     <>
