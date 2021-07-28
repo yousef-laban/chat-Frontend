@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { NavB, Logo } from "../styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
