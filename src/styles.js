@@ -1,18 +1,10 @@
 import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
+import { createGlobalStyle } from "styled-components";
 
 export const Center = styled.div`
-  text-align: center;
-
-  p {
-    font-weight: bold;
-  }
-
-  h1 {
-    font-size: 60px;
-    font-family: Brush Script MT;
-    margin-top: 50px;
-  }
+  
+   
 `;
 
 export const Image = styled.img`
@@ -60,6 +52,10 @@ export const DetaledImage = styled.img`
   width: 25rem;
   height: 25rem;
   border-radius: 4%;
+  position: absolute;
+   
+    left: 700px;
+    top: 200px;
 `;
 
 export const ProductImage = styled.img`
@@ -154,12 +150,54 @@ export const FormCenter = styled.form`
   margin: auto;
   margin-top: 80px;
   width: 40%;
-  border: 3px solid black;
+  border: 3px solid white;
   border-radius: 10px;
   padding: 20px;
+  color: white;
+  position: absolute;
+ 
+  left: 500px;
+  top: 150px;
+`;
+
+export const GlobalStyle = createGlobalStyle`
+
+
+body{
+  
+  background: url("https://www.colorhexa.com/11224b.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 `;
 
 export const ButtonsStyle = styled.div`
   display: flex;
   justify-content: left;
 `;
+export const theme = {
+  light: {
+    textColor: "black", // main font color
+    backGroundColor: "#11224B", // main background color
+    secoundColor: "gray",
+    thirdColor: "#a9f1df",
+  },
+
+  dark: {
+    textColor: "black", // main font color
+    backGroundColor: "#11224B", // main background color
+    secoundColor: "#2940d3",
+    thirdColor: "#a9f1df",
+  },
+  reverse: {
+    textColor: "black", // main font color
+    backGroundColor: "#11224B", // main background color
+    secoundColor: "#2940d3",
+    thirdColor: "#a9f1df",
+  },
+};
+
+
+

@@ -2,6 +2,10 @@ import { FormCenter } from "../../styles";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signin } from "../../store/actions/authActions";
+
+import '../../App.css';
+
+
 import { useHistory } from "react-router-dom";
 
 const Signin = () => {
@@ -67,10 +71,10 @@ const Signin = () => {
           name="password"
           onChange={handleChange}
         />
-      </div>
+      </div><br></br>
 
       <br />
-      <button type="submit" className="btn btn-primary" value="create">
+      <button type="submit" className="b15" value="create">
         Sign In
       </button>
     </FormCenter>
