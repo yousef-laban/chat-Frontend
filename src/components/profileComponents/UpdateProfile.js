@@ -11,9 +11,6 @@ const UpdateProfile = () => {
   let history = useHistory();
   const user = useSelector((state) => state.user.user);
 
-  const profiles = useSelector((state) => state.profiles.profiles);
-  const profile = profiles.filter((p) => p.userId === +user.id);
-
   const newProfile = {
     fullName: "",
     image: "",
@@ -90,7 +87,8 @@ const UpdateProfile = () => {
           // value={product.url} we remove it becouse type file is read only
           onChange={handelUrl}
         />
-      </div><br></br>
+      </div>
+      <br></br>
 
       <br />
       <button type="submit" className="b17" value="Update">

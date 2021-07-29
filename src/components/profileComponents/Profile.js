@@ -1,7 +1,7 @@
 //styling
 
 //
-import "../../App.css"
+import "../../App.css";
 
 
 import { useSelector } from "react-redux";
@@ -15,11 +15,9 @@ const Home = () => {
   const loading = useSelector((state) => state.profiles.loading);
 
   if (loading) return <h1>loading</h1>;
-  const wantedProfile = profiles.find((p) => +p.userId === user.id);
 
-  if (!wantedProfile) return <h2>loading</h2>;
+  const wantedProfile = profiles.find((p) => +p.userId === +user.id);
 
-  console.log("helo", wantedProfile);
 
   return (
     <>

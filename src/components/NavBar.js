@@ -2,7 +2,8 @@ import { NavB, Logo } from "../styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../store/actions/authActions";
-import '../App.css';
+import "../App.css";
+
 import { useHistory } from "react-router-dom";
 
 const NavBar = (props) => {
@@ -11,17 +12,15 @@ const NavBar = (props) => {
   let history = useHistory();
 
   const handelLogout = () => {
-    dispatch(logout());
-    history.push("./");
+    dispatch(logout(history));
   };
   return (
-    <NavB >
-      
+    <NavB>
       <Logo exact to="/">
-      <h1 className="tt">CHATTIE</h1>
-        
+        <h1 className="tt">CHATTIE</h1>
       </Logo>
-      
+
+
       <div>
      
         {user ? (
@@ -36,21 +35,15 @@ const NavBar = (props) => {
         ) : (
           <>
             <Link to="/signin">
-              <button
-                style={{ margin: "10px" }}
-                type="button"
-                class="b1"
-              >
+              <button style={{ margin: "10px" }} type="button" class="b1">
+
                 Sign In
               </button>
             </Link>
 
             <Link to="/signup">
-              <button
-                style={{ margin: "10px" }}
-                type="button"
-                class="b2"
-              >
+              <button style={{ margin: "10px" }} type="button" class="b2">
+
                 Sign Up
               </button>
             </Link>
