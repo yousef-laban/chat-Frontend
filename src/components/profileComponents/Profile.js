@@ -13,12 +13,6 @@ const Home = () => {
   if (loading) return <h1>loading</h1>;
   const wantedProfile = profiles.find((p) => +p.userId === user.id);
 
-  if (!wantedProfile) return <h2>loading</h2>;
-
-  console.log("helo", wantedProfile);
-
-  //   const { fullName, image, gender } = wantedProfile;
-
   return (
     <>
       <Link to="/profile/update">
