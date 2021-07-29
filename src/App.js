@@ -4,15 +4,21 @@ import NavBar from "./components/NavBar";
 import Signin from "./components/usersComponents/Signin";
 import Signup from "./components/usersComponents/Signup";
 import Profile from "./components/profileComponents/Profile";
+
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./styles";
 import { useState } from "react";
 
 //
 import { Route, Switch } from "react-router";
+
+
 import Verify from "./components/usersComponents/Verify";
 import Verifying from "./components/usersComponents/Verifying";
 import UpdateProfile from "./components/profileComponents/UpdateProfile";
+
+//
+import { Route, Switch } from "react-router";
 
 function App() {
   const [counter, setCounter] = useState(0);

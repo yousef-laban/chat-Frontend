@@ -1,7 +1,9 @@
 import { useDispatch } from "react-redux";
 
 
+
 // import { useHistory } from "react-router-dom";
+
 import { useSelector } from "react-redux";
 import { verify } from "../../store/actions/authActions";
 import "../../App.css"
@@ -9,8 +11,6 @@ import "../../App.css"
 const Verify = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
-
-  //   let history = useHistory();
 
   return (
     <>
