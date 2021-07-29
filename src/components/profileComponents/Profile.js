@@ -3,6 +3,7 @@
 //
 import "../../App.css";
 
+
 import { useSelector } from "react-redux";
 import { DetaledImage } from "../../styles";
 import { Link } from "react-router-dom";
@@ -16,6 +17,7 @@ const Home = () => {
   if (loading) return <h1>loading</h1>;
 
   const wantedProfile = profiles.find((p) => +p.userId === +user.id);
+
 
   return (
     <>

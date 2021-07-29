@@ -16,6 +16,9 @@ import Verify from "./components/usersComponents/Verify";
 import Verifying from "./components/usersComponents/Verifying";
 import UpdateProfile from "./components/profileComponents/UpdateProfile";
 
+//
+import { Route, Switch } from "react-router";
+
 function App() {
   const [counter, setCounter] = useState(0);
 
@@ -28,9 +31,12 @@ function App() {
     if (counter % 3 === 2) return "reverse";
   };
 
+
+    
   return (
     <ThemeProvider theme={theme[y()]}>
-      <GlobalStyle />
+    <GlobalStyle />
+ 
       <NavBar />
       <Switch>
         <Route exact path="/">
@@ -60,8 +66,10 @@ function App() {
           <Profile />
         </Route>
       </Switch>
-    </ThemeProvider>
+
+      </ThemeProvider>
+
   );
-}
+  }
 
 export default App;
