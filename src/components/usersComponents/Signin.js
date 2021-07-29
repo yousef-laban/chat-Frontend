@@ -3,8 +3,10 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signin } from "../../store/actions/authActions";
 
+import '../../App.css';
+
+
 import { useHistory } from "react-router-dom";
-// import { useSelector } from "react-redux";
 
 const Signin = () => {
   const dispatch = useDispatch();
@@ -55,7 +57,6 @@ const Signin = () => {
             id="inlineFormInputGroup"
             placeholder="Username"
             name="username"
-            //   value={product.name}
             onChange={handleChange}
           />
         </div>
@@ -68,13 +69,12 @@ const Signin = () => {
           placeholder="Enter the Password"
           type="password"
           name="password"
-          //   value={product.price}
           onChange={handleChange}
         />
-      </div>
+      </div><br></br>
 
       <br />
-      <button type="submit" className="btn btn-primary" value="create">
+      <button type="submit" className="b15" value="create">
         Sign In
       </button>
     </FormCenter>

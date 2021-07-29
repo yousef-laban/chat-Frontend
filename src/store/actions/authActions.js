@@ -1,4 +1,3 @@
-//
 import axios from "axios";
 import decode from "jwt-decode";
 // Action Types
@@ -27,9 +26,10 @@ export const signin = (userData, history) => async (dispatch) => {
   }
 };
 
-export const logout = () => async (dispatch) => {
+export const logout = (history) => async (dispatch) => {
   try {
     dispatch(setUser());
+    history.push("/");
   } catch (error) {
     console.log(error);
   }
