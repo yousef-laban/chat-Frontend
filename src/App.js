@@ -1,9 +1,9 @@
 //component
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
-import Signin from "./components/usersComponents/Signin";
-import Signup from "./components/usersComponents/Signup";
-import Profile from "./components/profileComponents/Profile";
+import Signin from "./components/Authentication/Signin";
+import Signup from "./components/Authentication/Signup";
+import Profile from "./components/Profile";
 
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./styles";
@@ -12,9 +12,9 @@ import { useState } from "react";
 //
 import { Route, Switch } from "react-router";
 
-import Verify from "./components/usersComponents/Verify";
-import Verifying from "./components/usersComponents/Verifying";
-import UpdateProfile from "./components/profileComponents/UpdateProfile";
+import Verify from "./components/Authentication/Verify";
+import Verifying from "./components/Authentication/Verifying";
+import UpdateProfile from "./components/Profile/UpdateProfile";
 
 //
 import { Route, Switch } from "react-router";
@@ -31,12 +31,10 @@ function App() {
     if (counter % 3 === 2) return "reverse";
   };
 
-
-    
   return (
     <ThemeProvider theme={theme[y()]}>
-    <GlobalStyle />
- 
+      <GlobalStyle />
+
       <NavBar />
       <Switch>
         <Route exact path="/">
@@ -66,10 +64,8 @@ function App() {
           <Profile />
         </Route>
       </Switch>
-
-      </ThemeProvider>
-
+    </ThemeProvider>
   );
-  }
+}
 
 export default App;
