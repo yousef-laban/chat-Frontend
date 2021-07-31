@@ -15,9 +15,7 @@ import { Route, Switch } from "react-router";
 import Verify from "./components/Authentication/Verify";
 import Verifying from "./components/Authentication/Verifying";
 import UpdateProfile from "./components/Profile/UpdateProfile";
-
-//
-import { Route, Switch } from "react-router";
+import NewChat from "./components/NewChat";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -62,6 +60,10 @@ function App() {
 
         <Route path="/profile">
           <Profile />
+        </Route>
+
+        <Route path="/new-chat">
+          <NewChat />
         </Route>
       </Switch>
     </ThemeProvider>

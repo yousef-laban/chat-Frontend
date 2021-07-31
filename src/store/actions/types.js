@@ -5,3 +5,4 @@ export const UPDATE_PROFILE = "UPDATE_PROFILE";
 // Auth actions
 export const SET_USER = "SET_USER";
 export const VERIFY = "VERIFY";
+export const FETCH_USERS = "FETCH_USERS";

@@ -14,13 +14,6 @@ const reducer = (state = initialState, action) => {
     case actionType.UPDATE_PROFILE:
       const { updatedProfile } = action.payload;
 
-      //   console.log(
-      //     "im hear",
-      //     state.profiles.map((profile) =>
-      //       profile.id === +updatedProfile.id ? updatedProfile : profile
-      //     )
-      //   );
-
       return {
         ...state,
         profiles: state.profiles.map((profile) =>

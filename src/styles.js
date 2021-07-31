@@ -2,10 +2,7 @@ import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
-export const Center = styled.div`
-  
-   
-`;
+export const Center = styled.div``;
 
 export const Image = styled.img`
   display: block;
@@ -53,9 +50,9 @@ export const DetaledImage = styled.img`
   height: 25rem;
   border-radius: 4%;
   position: absolute;
-   
-    left: 700px;
-    top: 200px;
+
+  left: 700px;
+  top: 200px;
 `;
 
 export const ProductImage = styled.img`
@@ -155,7 +152,7 @@ export const FormCenter = styled.form`
   padding: 20px;
   color: white;
   position: absolute;
- 
+
   left: 500px;
   top: 150px;
 `;
@@ -198,6 +195,3 @@ export const theme = {
     thirdColor: "#a9f1df",
   },
 };
-
-
-
