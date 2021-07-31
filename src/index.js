@@ -13,10 +13,12 @@ import store from "./store/index";
 //
 import { checkForToken, fetchUsers } from "./store/actions/authActions";
 import { fetchProfile } from "./store/actions/profileActions";
+import { fetchGroups } from "./store/actions/groupActions";
 
 store.dispatch(checkForToken());
 store.dispatch(fetchProfile());
 store.dispatch(fetchUsers());
+store.dispatch(fetchGroups());
 
 ReactDOM.render(
   <React.StrictMode>

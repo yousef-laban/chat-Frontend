@@ -6,3 +6,6 @@ export const UPDATE_PROFILE = "UPDATE_PROFILE";
 export const SET_USER = "SET_USER";
 export const VERIFY = "VERIFY";
 export const FETCH_USERS = "FETCH_USERS";
+//Group Acttions
+export const FETCH_GROUPS = "FETCH_GROUPS";
+export const CREATE_GROUPS = "CREATE_GROUPS";
