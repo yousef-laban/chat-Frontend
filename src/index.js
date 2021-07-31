@@ -11,11 +11,12 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/index";
 //
-import { checkForToken } from "./store/actions/authActions";
+import { checkForToken, fetchUsers } from "./store/actions/authActions";
 import { fetchProfile } from "./store/actions/profileActions";
 
 store.dispatch(checkForToken());
 store.dispatch(fetchProfile());
+store.dispatch(fetchUsers());
 
 ReactDOM.render(
   <React.StrictMode>

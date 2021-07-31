@@ -1,11 +1,26 @@
-import axios from "axios";
 import decode from "jwt-decode";
+import instance from "./instance";
+
 // Action Types
 import * as actionType from "./types";
 
+export const fetchUsers = () => {
+  return async (dispatch) => {
+    try {
+      const res = await instance.get("/users");
+      dispatch({
+        type: actionType.FETCH_USERS,
+        payload: res.data,
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+};
+
 export const signup = (userData, history) => async (dispatch) => {
   try {
-    const res = await axios.post(`http://localhost:8000/signup`, userData);
+    const res = await instance.post("/signup", userData);
 
     dispatch(setUser(res.data.token));
 
@@ -17,7 +32,7 @@ export const signup = (userData, history) => async (dispatch) => {
 
 export const signin = (userData, history) => async (dispatch) => {
   try {
-    const res = await axios.post(`http://localhost:8000/signin`, userData);
+    const res = await instance.post("/signin", userData);
 
     dispatch(setUser(res.data.token));
     history.push("/");
@@ -37,7 +52,7 @@ export const logout = (history) => async (dispatch) => {
 
 export const verify = (user) => async (dispatch) => {
   try {
-    const res = await axios.post("http://localhost:8000/verify", user);
+    const res = await instance.post("/verify", user);
 
     dispatch(verifyToken(res.data.token));
   } catch (error) {
@@ -48,7 +63,7 @@ export const verify = (user) => async (dispatch) => {
 export const verifying = (user, history) => async (dispatch) => {
   try {
     console.log(user);
-    const res = await axios.post("http://localhost:8000/verifying", user);
+    const res = await instance.post("/verifying", user);
 
     dispatch({
       type: actionType.SET_USER,

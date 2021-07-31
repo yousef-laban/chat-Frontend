@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Center } from "../../styles";
 
-import "../App.css";
+import "../../App.css";
 import pic1 from "../../images/pic1.png";
 import pic2 from "../../images/pic2.png";
 

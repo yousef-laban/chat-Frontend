@@ -3,7 +3,6 @@
 //
 import "../../App.css";
 
-
 import { useSelector } from "react-redux";
 import { DetaledImage } from "../../styles";
 import { Link } from "react-router-dom";
@@ -18,7 +17,6 @@ const Home = () => {
 
   const wantedProfile = profiles.find((p) => +p.userId === +user.id);
 
-
   return (
     <>
       <Link to="/profile/update">
@@ -31,7 +29,7 @@ const Home = () => {
           Edit Profile
         </button>
       </Link>
-      <DetaledImage src={wantedProfile.image} alt={wantedProfile.fullName} />
+      <DetaledImage src={wantedProfile?.image} alt={wantedProfile.fullName} />
       <p className="b10">Name : {wantedProfile.fullName}</p>
       <p className="b11">Gender : {wantedProfile.gender}</p>
       <p className="b12">Phone Num : {user.phoneNum}</p>

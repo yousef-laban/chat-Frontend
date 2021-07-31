@@ -2,7 +2,7 @@ import { NavB, Logo } from "../../styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/actions/authActions";
-import "../../App.csss";
+import "../../App.css";
 import { useHistory } from "react-router-dom";
 
 const NavBar = (props) => {
