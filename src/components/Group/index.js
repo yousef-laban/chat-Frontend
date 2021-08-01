@@ -1,9 +1,13 @@
 //styling//components
 
 //
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
+import { ChatDiv, FlexStyle, GroupDiv } from "../../styles";
+import Chat from "../Chat";
 import GCard from "../HCard/GCard";
+import Send from "../Send";
 
 const Group = (props) => {
   const history = useHistory();
@@ -11,6 +15,8 @@ const Group = (props) => {
 
   const groups = useSelector((state) => state.groups.groups);
   const loading = useSelector((state) => state.groups.loading);
+
+  const [wanted, setWanted] = useState(null);
 
   if (!_user) history.push("/");
 
@@ -24,12 +30,20 @@ const Group = (props) => {
       });
       return keep;
     })
-    .map((group) => <GCard group={group} _user={_user} />);
+    .map((group) => (
+      <div onClick={() => setWanted(group)}>
+        <GCard group={group} _user={_user} />
+      </div>
+    ));
 
   return (
-    <>
-      <div>{filteredList}</div>
-    </>
+    <FlexStyle>
+      <GroupDiv>{filteredList}</GroupDiv>
+      <ChatDiv>
+        <Chat wanted={wanted} />
+        <Send wanted={wanted} />
+      </ChatDiv>
+    </FlexStyle>
   );
 };
 

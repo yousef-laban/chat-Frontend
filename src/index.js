@@ -14,11 +14,13 @@ import store from "./store/index";
 import { checkForToken, fetchUsers } from "./store/actions/authActions";
 import { fetchProfile } from "./store/actions/profileActions";
 import { fetchGroups } from "./store/actions/groupActions";
+import { fetchAllMessages } from "./store/actions/messageActions";
 
 store.dispatch(checkForToken());
 store.dispatch(fetchProfile());
 store.dispatch(fetchUsers());
 store.dispatch(fetchGroups());
+store.dispatch(fetchAllMessages());
 
 ReactDOM.render(
   <React.StrictMode>
