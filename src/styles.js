@@ -195,3 +195,19 @@ export const theme = {
     thirdColor: "#a9f1df",
   },
 };
+
+export const GroupDiv = styled.div`
+  margin-top: 200px;
+  width: 20%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const ChatDiv = styled.div`
+  margin-top: 200px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+`;
