@@ -8,6 +8,7 @@ export const fetchGroups = () => {
   return async (dispatch) => {
     try {
       const res = await instance.get("/group");
+
       dispatch({
         type: actionType.FETCH_GROUPS,
         payload: res.data,
