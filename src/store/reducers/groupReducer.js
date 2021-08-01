@@ -7,7 +7,7 @@ const reducer = (state = initialState, action) => {
     case actionType.FETCH_GROUPS:
       return {
         ...state,
-        users: action.payload,
+        groups: action.payload,
         loading: false,
       };
 

@@ -1,4 +1,4 @@
-import { NavB, Logo, FlexStyle } from "../../styles";
+import { NavB, Logo } from "../../styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/actions/authActions";
@@ -38,6 +38,15 @@ const NavBar = (props) => {
               onClick={() => history.push("/new-chat")}
             >
               newwchat
+            </button>
+
+            <button
+              style={{ margin: "10px" }}
+              type="button"
+              class="b2"
+              onClick={() => history.push("/group")}
+            >
+              groups
             </button>
           </>
         ) : (

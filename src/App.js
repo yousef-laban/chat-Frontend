@@ -16,6 +16,7 @@ import Verify from "./components/Authentication/Verify";
 import Verifying from "./components/Authentication/Verifying";
 import UpdateProfile from "./components/Profile/UpdateProfile";
 import NewChat from "./components/NewChat";
+import Group from "./components/Group";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -64,6 +65,10 @@ function App() {
 
         <Route path="/new-chat">
           <NewChat />
+        </Route>
+
+        <Route path="/group">
+          <Group />
         </Route>
       </Switch>
     </ThemeProvider>
