@@ -16,6 +16,7 @@ const Verifying = () => {
   const check = () => {
     if (token === localToken) {
       user.verify = true;
+      // REIVEW: toast should happen in the actrion not here
       toast("sucessfully Verified", {
         position: "bottom-right",
         autoClose: 5000,

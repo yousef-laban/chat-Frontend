@@ -22,6 +22,7 @@ const NavBar = (props) => {
       <div>
         {user ? (
           <>
+            {/* REVIEW: Remove inline styling */}
             <button
               style={{ margin: "10px" }}
               type="button"

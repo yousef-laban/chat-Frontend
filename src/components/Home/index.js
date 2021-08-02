@@ -13,13 +13,19 @@ const Home = () => {
 
   return (
     <Center>
+      {/* This condition should be outside the return */}
+      {/* move it outside and write it as an if condition, 
+      and use Redirect */}
       {user ? (
+        // instead of user.verify === false => !user.verify
         user.verify === false ? (
+          // REVIEW: Without the .
           history.push("./verify")
         ) : (
           history.push("./profile")
         )
       ) : (
+        // history.push(!user.verify ? "" : "")
         <div>
           <h1 className="b3">Have your best chat </h1>
 

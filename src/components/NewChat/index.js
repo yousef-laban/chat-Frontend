@@ -20,12 +20,13 @@ const NewChat = (props) => {
   const loading = useSelector((state) => state.user.loading);
   const [query, setQuery] = useState("");
 
-  if (!_user) history.push("/");
+  if (!_user) history.push("/"); // REVIEW: Redirect not push
 
   if (loading || loading2) return <h2>loading !!!</h2>;
 
   let name = [];
 
+  // REVIEW: .filter returns a new
   groups
     .filter((group) => {
       let keep = false;
@@ -39,6 +40,12 @@ const NewChat = (props) => {
         if (+user.id !== +_user.id) name.push(user.username);
       });
     });
+
+  // const newArray = groups
+  // .filter((group) => group.users.some((user) => user.userId === _user.id))
+  // .forEach((group) => {
+  //   name = group.users.filter((user) => user.username);
+  // });
 
   const filteredList = users
     .filter((user) => user.username.toLowerCase().includes(query.toLowerCase()))

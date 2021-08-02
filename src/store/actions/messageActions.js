@@ -7,8 +7,11 @@ import * as actionType from "./types";
 export const fetchAllMessages = () => {
   return async (dispatch) => {
     try {
+      // Backend path should be `/messages` and not `/message`
       const res = await instance.get("/message");
       dispatch({
+        // REVIEW: there is a typo in the type
+        // REVIEW: it should be plural
         type: actionType.FETCH_MESSGAE,
         payload: res.data,
       });
@@ -18,6 +21,7 @@ export const fetchAllMessages = () => {
   };
 };
 
+// REVIEW: create not creat
 export const creatMessage = (data) => {
   return async (dispatch) => {
     try {

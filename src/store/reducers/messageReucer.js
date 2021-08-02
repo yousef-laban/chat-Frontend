@@ -2,6 +2,8 @@ import * as actionType from "../actions/types";
 
 const initialState = { messages: [], loading: true };
 
+// REVIEW: Fix the file name
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionType.FETCH_MESSGAE:

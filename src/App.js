@@ -19,6 +19,7 @@ import NewChat from "./components/NewChat";
 import Group from "./components/Group";
 
 function App() {
+  // REVIEW: What is this?
   const [counter, setCounter] = useState(0);
 
   const sw = () => {

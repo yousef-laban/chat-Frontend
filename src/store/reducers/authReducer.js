@@ -20,7 +20,7 @@ const authReducer = (state = initialState, action) => {
         users: action.payload,
         loading: false,
       };
-
+    // REVIEW: If this is not updating the state, no need to call the reducer.
     case actionType.VERIFY:
       return {
         ...state,

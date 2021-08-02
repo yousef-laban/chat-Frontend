@@ -59,9 +59,10 @@ export const verify = (user) => async (dispatch) => {
     console.log(error);
   }
 };
-
+// REVIEW: What's the difference between this function and the above
 export const verifying = (user, history) => async (dispatch) => {
   try {
+    // REVIEW: remove clg if you're done with it
     console.log(user);
     const res = await instance.post("/verifying", user);
 
@@ -110,6 +111,7 @@ const verifyToken = (token) => {
   localStorage.setItem("Token", token);
   return {
     type: actionType.VERIFY,
+    //REVIEW: Remove the payload
     payload: decode(token),
   };
 };

@@ -1,6 +1,7 @@
 import { Card } from "react-bootstrap";
 
 const MCard = (props) => {
+  // REVIEW: Deconstruct props to ({message, whatever, hi}) instead of (props)
   console.log(props.message.text);
   return (
     <Card style={{ width: "18rem" }}>
