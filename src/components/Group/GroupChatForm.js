@@ -10,6 +10,7 @@ const GroupChatForm = () => {
   const loading = useSelector((state) => state.user.loading);
   const _user = useSelector((state) => state.user.user);
 
+  // REIVEW: CONST INSTEAD OF LETTTTTTTTTTTTTT
   let newGroup = {
     name: "",
     image: "",
@@ -74,6 +75,7 @@ const GroupChatForm = () => {
     <div className="d-lg-flex p-4 justify-content-lg-center">
       <div className="jumbotron">
         <form onSubmit={handelSubmit}>
+          {/* REVIEW: && instead of ternary operator */}
           {image ? (
             <img
               className="mx-auto d-block"
