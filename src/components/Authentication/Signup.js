@@ -12,6 +12,8 @@ const Signup = () => {
     password: "",
     email: "",
     phoneNum: "",
+    userName: "",
+    gender: "",
   };
 
   const [user, setUser] = useState(newUser);
@@ -22,6 +24,8 @@ const Signup = () => {
       password: "",
       email: "",
       phoneNum: "",
+      userName: "",
+      gender: "",
     });
   };
 
@@ -95,7 +99,8 @@ const Signup = () => {
           name="phoneNum"
           onChange={handleChange}
         />
-      </div><br></br>
+      </div>
+      <br></br>
 
       <br />
       <button type="submit" className="b16" value="Creat">

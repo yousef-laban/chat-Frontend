@@ -17,6 +17,7 @@ import Verifying from "./components/Authentication/Verifying";
 import UpdateProfile from "./components/Profile/UpdateProfile";
 import NewChat from "./components/NewChat";
 import Group from "./components/Group";
+import GroupChatForm from "./components/Group/GroupChatForm";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -69,6 +70,10 @@ function App() {
 
         <Route path="/group">
           <Group />
+        </Route>
+
+        <Route path="/new-group">
+          <GroupChatForm />
         </Route>
       </Switch>
     </ThemeProvider>
