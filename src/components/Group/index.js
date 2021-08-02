@@ -49,7 +49,7 @@ const Group = (props) => {
        <div className="b22"></div>
        <img className="b23" src="https://image.flaticon.com/icons/png/128/5247/5247759.png"/>
        <img className="b24" src="https://image.flaticon.com/icons/png/128/747/747376.png"/>
-       <img className="b25" src="https://image.flaticon.com/icons/png/128/1370/1370907.png"/>
+       <img onClick={()=> console.log("farmer")} className="b25" src="https://image.flaticon.com/icons/png/128/1370/1370907.png"/>
        <img className="b26" src="https://image.flaticon.com/icons/png/128/1234/1234127.png"/>
        <img className="b27" src="https://image.flaticon.com/icons/png/128/4812/4812717.png"/>
        <img className="b28" src="https://image.flaticon.com/icons/png/128/2928/2928989.png"/>
