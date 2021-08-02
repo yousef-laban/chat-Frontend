@@ -17,7 +17,7 @@ const GCard = (props) => {
   }
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="c6">
       <Card.Body>
         <Card.Title>{name}</Card.Title>
       </Card.Body>

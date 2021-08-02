@@ -34,10 +34,10 @@ const NavBar = (props) => {
             <button
               style={{ margin: "10px" }}
               type="button"
-              class="b2"
+              class="b21"
               onClick={() => history.push("/new-chat")}
             >
-              newwchat
+              new chat
             </button>
 
             <button

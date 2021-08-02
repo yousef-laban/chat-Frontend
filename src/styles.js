@@ -64,7 +64,7 @@ export const ProductImage = styled.img`
 export const SearchBarStyled = styled.input`
   padding: 0.5rem;
   display: block;
-  width: 40%;
+  
 `;
 
 export const StyledButton = styled.button`
@@ -197,14 +197,10 @@ export const theme = {
 };
 
 export const GroupDiv = styled.div`
-  margin-top: 200px;
-  width: 20%;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
 `;
-
-export const ChatDiv = styled.div`
+ export const ChatDiv = styled.div`
+  
   margin-top: 200px;
   width: 80%;
   text-align: center;
