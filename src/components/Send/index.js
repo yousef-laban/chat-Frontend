@@ -25,8 +25,8 @@ const Send = (props) => {
 
   return (
     <FlexStyle>
-      <SearchBarStyled onChange={(event) => setMessage(event.target.value)} />
-      <Button variant="primary" onClick={handelClick}>
+      <SearchBarStyled className="l6" onChange={(event) => setMessage(event.target.value)} />
+      <Button className="l7" variant="primary" onClick={handelClick}>
         send
       </Button>
     </FlexStyle>
