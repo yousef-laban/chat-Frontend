@@ -16,6 +16,7 @@ const MCard = (props) => {
       <Card.Body >
         {/* <Card.Text className="c10">{user.username}</Card.Text> */}
         <Card.Title className="c8">{props.message?.text}</Card.Title>
+       
       </Card.Body>
     </div> 
     :

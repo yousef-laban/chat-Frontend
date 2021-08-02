@@ -693,14 +693,15 @@ color: rgba(0, 0, 0, 0.6);
     }
  .c1{
    position:relative;
-   min-width: 300px;
-   max-width: 700px;
+   min-width: 100px;
+   max-width: 300px;
    height: 50px;
    left:480px;
    margin-bottom: 10px;
-   border: 1px solid  rgba(0, 0, 0, 0.6);;
-  border-radius: 30px;
+   border: 0px solid  rgba(0, 0, 0, 0.6);;
+   border-radius: 5px;
   background-color:#5694ffa4;
+  
  
   
  }
@@ -709,9 +710,9 @@ color: rgba(0, 0, 0, 0.6);
   width:300px;
   height: 50px;
   margin-bottom: 10px;
-  border: 1px solid  rgba(0, 0, 0, 0.6);;
-  border-radius: 30px;
-  
+  border: 0px solid  rgba(0, 0, 0, 0.6);;
+  border-radius: 5px;
+  background-color:  rgba(0, 0, 0, 0.1);
 }
 
 .c3{
@@ -731,15 +732,15 @@ color: rgba(0, 0, 0, 0.6);
   position: absolute;
  top: 0px;
   left:70px;
-  top:15px;
+  top:12px;
   font-size: medium;
   
 }
 .c8{
   position: absolute;
  top: 0px;
-  left:10px;
-  top:15px;
+  left:15px;
+  top:12px;
   font-size: medium;
   color: black;
 }
@@ -754,5 +755,114 @@ color: rgba(0, 0, 0, 0.6);
  right: 400px;
  z-index:1;
  overflow-y: auto;
+}
+
+.c20{
+  /* Polygon 1 */
+/* Message 2 */
+
+position: absolute;
+width: 325px;
+height: 58px;
+left: 946px;
+top: 564px;
+
+border-radius: 0px;
+
+
+/* 10 : 35 AM */
+
+position: absolute;
+height: 15px;
+left: 0%;
+right: 81.23%;
+top: calc(50% - 15px/2 + 20.5px);
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 13px;
+line-height: 15px;
+
+color: #9D9D9D;
+
+
+
+/* Sent and seen */
+
+position: absolute;
+width: 16.8px;
+height: 9.7px;
+left: 63px;
+top: 45px;
+
+
+
+/* Path */
+
+position: absolute;
+left: 19.38%;
+right: 76.68%;
+top: 77.59%;
+bottom: 5.69%;
+
+background: rgba(30, 113, 255, 0.65);
+
+
+/* Path Copy */
+
+position: absolute;
+left: 20.62%;
+right: 75.45%;
+top: 77.59%;
+bottom: 5.69%;
+
+background: rgba(30, 113, 255, 0.65);
+
+
+/* Rectangle */
+
+position: absolute;
+left: 26.46%;
+right: -1.56%;
+top: 0%;
+bottom: 0%;
+
+background: rgba(30, 113, 255, 0.65);
+border-radius: 5px;
+
+
+/* No, bro. Couldn’t. I */
+
+position: absolute;
+height: 50px;
+left: 30.15%;
+right: 1.85%;
+top: calc(50% - 50px/2 + 3px);
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+/* or 131% */
+
+color: #FFFFFF;
+
+
+
+/* Polygon 1 */
+
+position: absolute;
+width: 26px;
+height: 30px;
+left: 1287px;
+top: 579px;
+
+background: #6BA1FE;
+transform: rotate(90deg);
+
+
+
 }
 
