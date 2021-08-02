@@ -26,7 +26,7 @@ const Group = (props) => {
     .filter((group) => {
       let keep = false;
       group.users.forEach((user) => {
-        if (user.id === _user.id) keep = true;
+        if (user.userId === _user.id) keep = true;
       });
       return keep;
     })

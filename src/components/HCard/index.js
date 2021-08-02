@@ -1,6 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { creatGroup } from "../../store/actions/groupActions";
+import { creatDM } from "../../store/actions/groupActions";
 
 const HCard = (props) => {
   const dispatch = useDispatch();
@@ -11,17 +11,16 @@ const HCard = (props) => {
   };
 
   const handelClick = () => {
-    dispatch(creatGroup(newChat));
+    dispatch(creatDM(newChat));
   };
 
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="left" src={props.user.profile.image} />
+      <Card.Img variant="left" src={props.user.profile?.image} />
       <Card.Body>
         <Card.Title>{props.user.username}</Card.Title>
 
         <Button variant="primary" onClick={handelClick}>
-          {" "}
           chat
         </Button>
       </Card.Body>

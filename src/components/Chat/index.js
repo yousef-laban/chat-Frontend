@@ -21,7 +21,6 @@ const Chat = (props) => {
 
   return (
     <>
-      <h2>chattttt</h2>
       <div>{filteredMessages}</div>
     </>
   );

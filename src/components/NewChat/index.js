@@ -30,14 +30,15 @@ const NewChat = (props) => {
     .filter((group) => {
       let keep = false;
       group.users.forEach((user) => {
-        if (user.id === _user.id) keep = true;
+        if (user.userId === _user.id) keep = true;
       });
       return keep;
-    })
+    }) // return all groups the user in
     .filter((group) => {
-      group.users.forEach((user) => {
-        if (+user.id !== +_user.id) name.push(user.username);
-      });
+      if (!group.name)
+        group.users.forEach((user) => {
+          if (+user.userId !== +_user.id) name.push(user.username);
+        });
     });
 
   const filteredList = users

@@ -1,12 +1,18 @@
 import { Card } from "react-bootstrap";
+import { useSelector } from "react-redux";
 
 const MCard = (props) => {
-  console.log(props.message.text);
+  const users = useSelector((state) => state.user.users);
+
+  const user = users.find((user) => +user.id === +props.message.userId);
+
+  console.log(user);
+
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
-        <Card.Text>sender : {props.message.sender?.username}</Card.Text>
-        <Card.Title>{props.message?.text}</Card.Title>
+        <Card.Text>sender : {user.username}</Card.Text>
+        <Card.Title>{props.message.text}</Card.Title>
       </Card.Body>
     </Card>
   );
