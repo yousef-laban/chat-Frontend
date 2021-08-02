@@ -30,10 +30,10 @@ const Signin = () => {
     setUser({ ...user, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    dispatch(signin(user, history));
+  const handleSubmit = async (event) => {
+     event.preventDefault();
+console.log(user)
+    await dispatch(signin(user, history));
 
     resetForm();
   };

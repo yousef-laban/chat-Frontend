@@ -1,12 +1,15 @@
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import MCard from "../HCard/MCard";
+import { useState } from "react";
+
 
 const Chat = (props) => {
   const history = useHistory();
   const _user = useSelector((state) => state.user.user);
   const messages = useSelector((state) => state.messages.messages);
   const loading = useSelector((state) => state.messages.loading);
+  const [wanted, setWanted] = useState(null);
   if (!props.wanted) return <></>;
   const groupId = props.wanted.id;
 
@@ -21,8 +24,9 @@ const Chat = (props) => {
 
   return (
     <>
-      <h2>chattttt</h2>
-      <div>{filteredMessages}</div>
+       <div className="l9" >{filteredMessages}</div>
+      
+    
     </>
   );
 };
