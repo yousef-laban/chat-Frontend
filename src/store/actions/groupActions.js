@@ -19,7 +19,7 @@ export const fetchGroups = () => {
   };
 };
 
-export const creatGroup = (data) => {
+export const creatGroup = (data, setWanted) => {
   return async (dispatch) => {
     try {
       const xdata = Object.assign({}, data);
@@ -32,6 +32,7 @@ export const creatGroup = (data) => {
       const res = await instance.post("/group/create-group", formData);
 
       res.data.users = xdata.usersId;
+      setWanted(res.data);
 
       dispatch({
         type: actionType.CREATE_GROUPS,

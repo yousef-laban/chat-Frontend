@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Select from "react-select";
 import { creatGroup } from "../../store/actions/groupActions";
 
-const GroupChatForm = () => {
+const GroupChatForm = (props) => {
   const dispatch = useDispatch();
 
   const users = useSelector((state) => state.user.users);
@@ -58,8 +58,10 @@ const GroupChatForm = () => {
     };
     newFrom.usersId.push({ userId: _user.id });
 
-    dispatch(creatGroup(newFrom));
+    dispatch(creatGroup(newFrom, props.setWanted));
     handelRest();
+    // props.setWanted(newFrom);
+    props.handleClose();
   };
 
   const handelRest = () => {
@@ -117,8 +119,17 @@ const GroupChatForm = () => {
             autoFocus
             isSearchable
           />
+          <br />
           <button type="submit" className="btn btn-primary">
-            "Submit"
+            Submit
+          </button>
+
+          <button
+            style={{ margin: "20px" }}
+            onClick={() => props.handleClose()}
+            className="btn btn-primary"
+          >
+            Close
           </button>
         </form>
       </div>
