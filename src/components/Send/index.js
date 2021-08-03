@@ -33,19 +33,19 @@ const Send = (props) => {
 
   return (
     <FlexStyle>
-      {/* <SearchBarStyled
+      <SearchBarStyled
         value={message.text}
         className="l6"
         onChange={(event) => setMessage(event.target.value)}
-      /> */}
-      <InputEmoji
+      />
+      {/* <InputEmoji
         className="l6"
         value={message.text}
         onChange={setMessage}
         cleanOnEnter
         onEnter={handelClick}
         placeholder="Type a message"
-      />
+      /> */}
       <Button className="l7" variant="primary" onClick={handelClick}>
         send
       </Button>

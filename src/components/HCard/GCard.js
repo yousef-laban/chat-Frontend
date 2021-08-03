@@ -1,9 +1,4 @@
-
-
-
-import { Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
-
 
 const GCard = (props) => {
   const users = useSelector((state) => state.user.users);
@@ -20,9 +15,7 @@ const GCard = (props) => {
     });
   }
 
-  return (
-    <div > {name}</div>
-  );
+  return <div> {name}</div>;
 };
 
 export default GCard;

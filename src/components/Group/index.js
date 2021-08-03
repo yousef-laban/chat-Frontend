@@ -1,6 +1,6 @@
 //
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { ChatDiv, FlexStyle, GroupDiv } from "../../styles";
 import { Modal, Button } from "react-bootstrap";
@@ -14,18 +14,30 @@ import Group1 from "../../images/Group1.png";
 import Group2 from "../../images/Group2.png";
 import Group3 from "../../images/Group3.png";
 import GroupChatForm from "./GroupChatForm";
+import { fetchAllMessages } from "../../store/actions/messageActions";
 
 const Group = (props) => {
   const history = useHistory();
+  const dispatch = useDispatch();
+
   const _user = useSelector((state) => state.user.user);
   const users = useSelector((state) => state.user.users);
   const loading = useSelector((state) => state.user.loading);
   const groups = useSelector((state) => state.groups.groups);
   const loading2 = useSelector((state) => state.groups.loading);
 
+  const MINUTE_MS = 2000;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch(fetchAllMessages());
+    }, MINUTE_MS);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const [wanted, setWanted] = useState(null);
   const [show, setShow] = useState(false);
-
   if (!_user) history.push("/");
 
   if (loading || loading2) return <h2>loading !!!</h2>;
@@ -113,7 +125,7 @@ const Group = (props) => {
         <Chat wanted={wanted} />
         <Send wanted={wanted} />
       </ChatDiv>
-       <div  >{filteredList}</div>
+      <div>{filteredList}</div>
 
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
@@ -123,14 +135,6 @@ const Group = (props) => {
           <GroupChatForm setWanted={setWanted} handleClose={handleClose} />
         </Modal.Body>
       </Modal>
-
-      
- 
-       
-      
-    
-      
-     
     </FlexStyle>
   );
 };
