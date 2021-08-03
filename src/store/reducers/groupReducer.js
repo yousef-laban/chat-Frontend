@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) => {
     case actionType.CREATE_GROUPS:
       return {
         ...state,
-        users: [...state.users, action.payload],
+        groups: [...state.groups, action.payload],
       };
 
     default:

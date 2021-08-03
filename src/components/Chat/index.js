@@ -24,9 +24,11 @@ const Chat = (props) => {
 
   return (
     <>
+
        <div className="l9" >{filteredMessages}</div>
       
     
+
     </>
   );
 };
