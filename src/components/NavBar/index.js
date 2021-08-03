@@ -31,14 +31,14 @@ const NavBar = (props) => {
               Log Out
             </button>
 
-            <button
+            {/* <button
               style={{ margin: "10px" }}
               type="button"
               class="b21"
               onClick={() => history.push("/new-chat")}
             >
               new chat
-            </button>
+            </button> */}
 
             <button
               style={{ margin: "10px" }}
@@ -46,7 +46,7 @@ const NavBar = (props) => {
               class="b2"
               onClick={() => history.push("/group")}
             >
-              groups
+              Chat
             </button>
           </>
         ) : (

@@ -5,10 +5,12 @@ import { useHistory } from "react-router";
 import { ChatDiv, FlexStyle, GroupDiv } from "../../styles";
 import { Modal, Button } from "react-bootstrap";
 
+
 //components
 import Chat from "../Chat";
 import GCard from "../HCard/GCard";
 import Send from "../Send";
+import NewChat from "../NewChat"
 //images
 import Group1 from "../../images/Group1.png";
 import Group2 from "../../images/Group2.png";
@@ -77,55 +79,36 @@ const Group = (props) => {
           src="https://image.flaticon.com/icons/png/128/747/747376.png"
           alt="b23"
         />
-        <img
-          className="b25"
-          src="https://image.flaticon.com/icons/png/128/1370/1370907.png"
-          alt="b23"
-        />
+        <div className="b241">Profile </div>
         <img
           onClick={handleShow}
           className="b26"
-          src="https://image.flaticon.com/icons/png/128/1234/1234127.png"
+          src="https://image.flaticon.com/icons/png/128/5014/5014205.png"
           alt="b23"
         />
-        <img
-          className="b27"
-          src="https://image.flaticon.com/icons/png/128/4812/4812717.png"
-          alt="b23"
-        />
-        <img
-          className="b28"
-          src="https://image.flaticon.com/icons/png/128/2928/2928989.png"
-          alt="b23"
-        />
-        <img
-          className="b29"
-          src="https://image.flaticon.com/icons/png/128/503/503819.png"
-          alt="b23"
-        />
-        <img
-          className="b30"
-          src="https://image.flaticon.com/icons/png/128/2370/2370264.png"
-          alt="b23"
-        />
+        <div className="b2411">New Group</div>
+        
+        
         <div className="a1"></div>
         <img className="p1" src={Group1} alt={"pic1"} />
-        <div className="p2"></div>
-        <div className="p3">Search for a friend</div>
+        <div className="p2"></div> 
+         <div className="p3">Search for a friend</div> 
         <img className="p4" src={Group2} alt="b23" />
         <div className="l1"></div>
-        <img className="l2" src={Group3} alt="b23" />
+        {/* <img className="l2" src={Group3} alt="b23" /> */}
         <div className="l3"></div>
         <div className="l8"></div>
         <img className="l10" src={user.profile.image} alt="b23" />
         <div className="l11">{_user.username}</div>
         <div className="l12">Available</div>
-      </div>
+        <div>{filteredList}</div>
+        <NewChat/>      
+        </div>
       <ChatDiv>
         <Chat wanted={wanted} />
         <Send wanted={wanted} />
       </ChatDiv>
-      <div>{filteredList}</div>
+     
 
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
