@@ -44,7 +44,7 @@ const Group = (props) => {
       return keep;
     })
     .map((group) => (
-      <div onClick={() => setWanted(group)}>
+      <div className="c100" onClick={() => setWanted(group)}>
         <GCard group={group} _user={_user} />
       </div>
     ));
@@ -113,7 +113,7 @@ const Group = (props) => {
         <Chat wanted={wanted} />
         <Send wanted={wanted} />
       </ChatDiv>
-      <GroupDiv>{filteredList}</GroupDiv>
+       <div  >{filteredList}</div>
 
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
@@ -123,6 +123,14 @@ const Group = (props) => {
           <GroupChatForm setWanted={setWanted} handleClose={handleClose} />
         </Modal.Body>
       </Modal>
+
+      
+ 
+       
+      
+    
+      
+     
     </FlexStyle>
   );
 };

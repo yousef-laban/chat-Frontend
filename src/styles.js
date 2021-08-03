@@ -196,9 +196,7 @@ export const theme = {
   },
 };
 
-export const GroupDiv = styled.div`
-  position: absolute;
-`;
+
  export const ChatDiv = styled.div`
   
   margin-top: 200px;
@@ -207,3 +205,12 @@ export const GroupDiv = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+
+export const DivStyle={
+  overflowY: 'scroll',
+  border:'1px solid red',
+  width:'500px',
+  float: 'left',
+  height:'500px',
+  position:'relative'
+};

@@ -695,7 +695,7 @@ color: rgba(0, 0, 0, 0.6);
    position:relative;
    min-width: 100px;
    max-width: 300px;
-   height: 50px;
+   height: 60px;
    left:480px;
    margin-bottom: 10px;
    border: 0px solid  rgba(0, 0, 0, 0.6);;
@@ -707,8 +707,9 @@ color: rgba(0, 0, 0, 0.6);
  }
  .c2{
   position: relative;;
-  width:300px;
-  height: 50px;
+  min-width: 100px;
+  max-width:300px;
+  height: 60px;
   margin-bottom: 10px;
   border: 0px solid  rgba(0, 0, 0, 0.6);;
   border-radius: 5px;
@@ -731,7 +732,7 @@ color: rgba(0, 0, 0, 0.6);
 .c4{
   position: absolute;
  top: 0px;
-  left:70px;
+  left:60px;
   top:12px;
   font-size: medium;
   
@@ -739,7 +740,7 @@ color: rgba(0, 0, 0, 0.6);
 .c8{
   position: absolute;
  top: 0px;
-  left:15px;
+  left:60px;
   top:12px;
   font-size: medium;
   color: black;
@@ -865,4 +866,29 @@ transform: rotate(90deg);
 
 
 }
+.c100{
+  position:relative;
+  max-height:500px ;
+  top:185px;
+font-size: 30px;
+  width: 390px;
+  left: 98px;
+  height: 60px;
+ border-bottom: 0.5px solid;
+ padding-left: 35px;
 
+text-align:left ;
+margin-bottom: 5px;
+
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.c101{
+width: 35px;
+height: 35px;
+border-radius: 50px;
+left:0px ;
+margin-top: 10px;
+}
+ 

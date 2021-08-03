@@ -1,5 +1,9 @@
+
+
+
 import { Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
+
 
 const GCard = (props) => {
   const users = useSelector((state) => state.user.users);
@@ -17,11 +21,7 @@ const GCard = (props) => {
   }
 
   return (
-    <Card className="c6">
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-      </Card.Body>
-    </Card>
+    <div > {name}</div>
   );
 };
 
