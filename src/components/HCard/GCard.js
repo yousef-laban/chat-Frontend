@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import group4 from "../../images/group4.png";
 
 const GCard = (props) => {
   const users = useSelector((state) => state.user.users);
@@ -15,7 +16,7 @@ const GCard = (props) => {
     });
   }
 
-  return <div> {name}</div>;
+  return <div><img className="c105" src={group4} /><div className="c106">{name}</div> </div>;
 };
 
 export default GCard;

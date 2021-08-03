@@ -46,13 +46,15 @@ export const ItemDetail = styled.div`
 `;
 
 export const DetaledImage = styled.img`
-  width: 25rem;
-  height: 25rem;
-  border-radius: 4%;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 5%;
   position: absolute;
 
-  left: 700px;
-  top: 200px;
+  left: 390px;
+  top: 270px;
+  border:0px solid;
+  box-shadow: 0px 0px 7px 7px rgba(86, 148, 255, 0.5);
 `;
 
 export const ProductImage = styled.img`
@@ -214,3 +216,14 @@ export const DivStyle={
   height:'500px',
   position:'relative'
 };
+export const SearchBarStyled1 = styled.input`
+  width: 313px;
+  height: 43px;
+  position: absolute;
+  top:0.9px;
+  border: 0px solid;
+  border-radius: 30px;
+  right: 1px;
+  
+  
+`;
