@@ -17,7 +17,7 @@ const Home = () => {
         user.verify === false ? (
           history.push("./verify")
         ) : (
-          history.push("./profile")
+          history.push("./group")
         )
       ) : (
         <div>
