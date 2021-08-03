@@ -35,7 +35,7 @@ const Group = (props) => {
       return keep;
     })
     .map((group) => (
-      <div onClick={() => setWanted(group)}>
+      <div className="c100" onClick={() => setWanted(group)}>
         <GCard group={group} _user={_user} />
       </div>
     ));
@@ -68,15 +68,18 @@ const Group = (props) => {
        <div className="l11">Yousef Laban</div>
        <div className="l12">Available</div>
       
-
+ 
        
-      </div>
+
+       <div  >{filteredList}</div>
+       
+       </div>
       <ChatDiv >
         <Chat  wanted={wanted} />
         <Send wanted={wanted} />
       </ChatDiv>
+     
       
-      <GroupDiv>{filteredList}</GroupDiv>
     
       
      

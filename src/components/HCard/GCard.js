@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+
 
 const GCard = (props) => {
   let name = "";
@@ -8,11 +8,7 @@ const GCard = (props) => {
   });
 
   return (
-    <Card className="c6">
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-      </Card.Body>
-    </Card>
+    <div > {name}</div>
   );
 };
 
